@@ -27,9 +27,9 @@ This paragraph will list the datasets we identified as interesting when we had a
 
 ### Recreation Information Database
 
-This an http API with extensive documentatin that can be found [here](https://usda.github.io/RIDB/). Register for an API key [here](https://ridb.recreation.gov/?action=register) and check out my [example notebook](examples/recreation_database_api.ipynb)
+This an http API with extensive documentatin that can be found [here](https://usda.github.io/RIDB/). Register for an API key [here](https://ridb.recreation.gov/?action=register) and check out my [example notebook](examples/recreation_database_api.ipynb).
 
-In case you don't feel like using their API, you can download the whole dataset from here https://ridb.recreation.gov/?action=datadownload.
+In case you don't feel like using their API, you can download the whole dataset from [here](https://ridb.recreation.gov/?action=datadownload).
 
 
 ### The Integrated Resource Management Applications Portal (IRMA)
