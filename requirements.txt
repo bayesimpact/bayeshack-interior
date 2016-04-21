@@ -1,0 +1,3 @@
+ipython[all]
+requests
+folium
