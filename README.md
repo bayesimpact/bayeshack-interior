@@ -24,6 +24,14 @@ Install all the Python dependencies needed for the notebook by executing `pip in
 
 This paragraph will list the datasets we identified as interesting when we had a quick look at the available sources. This is however not a comprehensive list and **we encourage you to dig deeper into the portal**.
 
+
+### Recreation Information Database
+
+This an http API with extensive documentatin that can be found [here](https://usda.github.io/RIDB/). Register for an API key [here](https://ridb.recreation.gov/?action=register) and check out my [example notebook](examples/recreation_database_api.ipynb)
+
+In case you don't feel like using their API, you can download the whole dataset from here https://ridb.recreation.gov/?action=datadownload.
+
+
 ### The Integrated Resource Management Applications Portal (IRMA)
 
 The [portal](https://irma.nps.gov/Portal) offers a large amount of datasets in different formats. Notable categories are:
@@ -78,10 +86,3 @@ The Bureau of [Land Management GeoCommunicator](http://www.geocommunicator.gov/G
 * BLM Solar Energy Study Areas
 * Public Land Survey System - PLSS (township, range, section, lots, surveys) - Downloadable
 * Rights-of-Way (ROW)
-
-
-### Recreation Information Database
-
-This an http API with extensive documentatin that can be found [here](https://usda.github.io/RIDB/). Register for an API key [here](https://ridb.recreation.gov/?action=register) and check out my [example notebook](examples/recreation_database_api.ipynb)
-
-In case you don't feel like using their API, you can download the whole dataset from here https://ridb.recreation.gov/?action=datadownload.
