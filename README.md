@@ -35,7 +35,60 @@ In case you don't feel like using their API, you can download the whole dataset 
 ### Data Dictionary for RIDB and NCSU
 
 #### RIDB
-Coming soon...
+|	COLUMN	|	DATA-TYPE	|	DESCRIPTION	|
+| ---		| ---		| ---		|
+|	ID	|	NUMBER(38)	|	System generated unique id for the order	|
+|	ORD_NUM	|	VARCHAR2(255 BYTE)	|	Order number(or reservation number)	|
+|	AGENCY	|	VARCHAR2(255 BYTE)  	|	Agency Name	|
+|	CODE_HIERARCHY	|	VARCHAR2(255 BYTE)	|	Code Hierarchy-keep a complete path from the root to the leaf in the tree	|
+|	REGION_CODE	|	VARCHAR2(50 BYTE)	|	Region Code	|
+|	REGION_DSCR	|	VARCHAR2(255 BYTE)  	|	Region Description	|
+|	PARENT_LOC_ID	|	 NUMBER(38) 	|	Parent Location ID	|
+|	PARENT_LOC	|	VARCHAR2(255 BYTE)  	|	Parent Location Name	|
+|	FACILITY_ID	|	 NUMBER(38) 	|	Facility ID	|
+|	PARK	|	VARCHAR2(255 BYTE)  	|	Facility Name	|
+|	Site Type	|	VARCHAR2(255 BYTE)  	|	Site Type	|
+|	Use Type	|	NUMBER(38)	|	Site Usage Type - Day / Night	|
+|	CAT	|	NUMBER(38) 	|	Category of Site/Product-  Product group category - point to system reference for decodes	|
+|	PRD_ID	|	NUMBER(38)	|	Product ID	|
+|	FACILITY_ZIP	|	VARCHAR2(20 BYTE)	|	Facility Zip Code	|
+|	FACILITY_STATE	|	 NUMBER(38) 	|	Facility State	|
+|	LONG	|	VARCHAR2(4000 BYTE)	|	Longitude	|
+|	LAT	|	VARCHAR2(4000 BYTE)	|	Latitude	|
+|	Customer Zip Code	|	VARCHAR2(20 BYTE)	|	Customer Zip Code	|
+|	Cust_State	|	VARCHAR2(50 BYTE)	|	Customer State	|
+|	Country	|	VARCHAR2(50 BYTE)  	|	Customer Country	|
+|	TAX	|	NUMBER(15,2)  	|	Tax	|
+|	USE_FEE	|	NUMBER(15,2)  	|	Use Fee	|
+|	TRAN_FEE	|	NUMBER(15,2)  	|	Transaction Fee	|
+|	ATTR_FEE	|	NUMBER(15,2)  	|	Attribute Fee	|
+|	Before tax	|	NUMBER(15,2)  	|	Before Tax Amount	|
+|	PAID	|	NUMBER(15,2)  	|	Total Paid	|
+|	START_DATE	|	DATE	|	Arrival Date	|
+|	END_DATE	|	DATE	|	Departure Date	|
+|	ORD_DATE	|	DATE	|	Order Date	|
+|	TENT	|	NUMBER(38)	|	Equipment - Quantity	|
+|	POPUP	|	NUMBER(38)	|	Equipment - Quantity	|
+|	TRAILER	|	NUMBER(38)	|	Equipment - Quantity	|
+|	RV_MOTORHOME	|	NUMBER(38)	|	Equipment - Quantity	|
+|	BOAT	|	NUMBER(38)	|	Equipment - Quantity	|
+|	HORSE_TRAILER	|	NUMBER(38)	|	Equipment - Quantity	|
+|	CAR	|	NUMBER(38)	|	Equipment - Quantity	|
+|	FIFTH_WHEEL	|	NUMBER(38)	|	Equipment - Quantity	|
+|	VAN	|	NUMBER(38)	|	Equipment - Quantity	|
+|	CANOE_KAYAK	|	NUMBER(38)	|	Equipment - Quantity	|
+|	BOAT_TRAILER	|	NUMBER(38)	|	Equipment - Quantity	|
+|	MOTORCYCLE	|	NUMBER(38)	|	Equipment - Quantity	|
+|	TRUCK	|	NUMBER(38)	|	Equipment - Quantity	|
+|	BUS	|	NUMBER(38)	|	Equipment - Quantity	|
+|	BICYCLE	|	NUMBER(38)	|	Equipment - Quantity	|
+|	SNOWMOBILE	|	NUMBER(38)	|	Equipment - Quantity	|
+|	OFF_ROAD_ALL_TERRAIN_VEHICLE	|	NUMBER(38)	|	Equipment - Quantity	|
+|	POWER_BOAT	|	NUMBER(38)	|	Equipment - Quantity	|
+|	PICKUP_CAMPER	|	NUMBER(38)	|	Equipment - Quantity	|
+|	LARGE_TENT_OVER_9X12	|	NUMBER(38)	|	Equipment - Quantity	|
+|	SMALL_TENT	|	NUMBER(38)	|	Equipment - Quantity	|
+|	MARINABOAT	|	NUMBER(38)	|	Equipment - Quantity	|
 
 #### NCSU
 
@@ -45,10 +98,10 @@ The [NRRS_PPL_reservationdata_AllYears.csv](https://velocity.ncsu.edu/dl/1uRTn6g
 
 This dataset includes most of the original RIDB fields along with newly calculated fields by NCSU.  The additional fields are:
 
-1. Great circle distance - distance between visitor ZIP centroid and destination facility x y in km.
-2. Duration - length of stay.  Difference between arrival and departure in days.
-3. Lead time - difference between reservation order date and vacation start date.
-4. Person nights - duration x number of ppl in the party.  Say I have two people in my party staying for 5 nights, total person nights would be 10.
+1. *Great circle distance* - distance between visitor ZIP centroid and destination facility x y in km.
+2. *Duration* - length of stay - difference between arrival and departure in days.
+3. *Lead time* - difference between reservation order date and vacation start date.
+4. *Person nights* - duration x number of ppl in the party.  Say I have two people in my party staying for 5 nights, total person nights would be 10.
 
 ### The Integrated Resource Management Applications Portal (IRMA)
 
