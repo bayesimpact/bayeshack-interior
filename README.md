@@ -29,13 +29,68 @@ This paragraph will list the datasets we identified as interesting when we had a
 
 This an http API with extensive documentatin that can be found [here](https://usda.github.io/RIDB/). Register for an API key [here](https://ridb.recreation.gov/?action=register) and check out my [example notebook](examples/recreation_database_api.ipynb).
 
-In case you don't feel like using their API, you can download the whole dataset from [here](https://ridb.recreation.gov/?action=datadownload).
+In case you don't feel like using their API, you can download the whole dataset from [here](https://ridb.recreation.gov/?action=datadownload), or slack @dannoparker for a disk copy.
 
 
 ### Data Dictionary for RIDB and NCSU
 
 #### RIDB
-Coming soon...
+The RIDB historical RIDB data is organized into 10 separate csv files.  Note that these files are organized by U.S. Government fiscal year.  So, 2015 would represent orders placed between October 1st, 2014 and September 30th, 2015.  Contact @delapper if you have questions about how the files are organized.
+
+|	COLUMN	|	DATA-TYPE	|	DESCRIPTION	|
+| ---		| ---		| ---		|
+|	ID	|	NUMBER(38)	|	System generated unique id for the order	|
+|	ORD_NUM	|	VARCHAR2(255 BYTE)	|	Order number(or reservation number)	|
+|	AGENCY	|	VARCHAR2(255 BYTE)  	|	Agency Name	|
+|	CODE_HIERARCHY	|	VARCHAR2(255 BYTE)	|	Code Hierarchy-keep a complete path from the root to the leaf in the tree	|
+|	REGION_CODE	|	VARCHAR2(50 BYTE)	|	Region Code	|
+|	REGION_DSCR	|	VARCHAR2(255 BYTE)  	|	Region Description	|
+|	PARENT_LOC_ID	|	 NUMBER(38) 	|	Parent Location ID	|
+|	PARENT_LOC	|	VARCHAR2(255 BYTE)  	|	Parent Location Name	|
+|	FACILITY_ID	|	 NUMBER(38) 	|	Facility ID	|
+|	PARK	|	VARCHAR2(255 BYTE)  	|	Facility Name	|
+|	Site Type	|	VARCHAR2(255 BYTE)  	|	Site Type	|
+|	Use Type	|	NUMBER(38)	|	Site Usage Type - Day / Night	|
+|	CAT	|	NUMBER(38) 	|	Category of Site/Product-  Product group category - point to system reference for decodes	|
+|	PRD_ID	|	NUMBER(38)	|	Product ID	|
+|	FACILITY_ZIP	|	VARCHAR2(20 BYTE)	|	Facility Zip Code	|
+|	FACILITY_STATE	|	 NUMBER(38) 	|	Facility State	|
+|	LONG	|	VARCHAR2(4000 BYTE)	|	Longitude	|
+|	LAT	|	VARCHAR2(4000 BYTE)	|	Latitude	|
+|	Customer Zip Code	|	VARCHAR2(20 BYTE)	|	Customer Zip Code	|
+|	Cust_State	|	VARCHAR2(50 BYTE)	|	Customer State	|
+|	Country	|	VARCHAR2(50 BYTE)  	|	Customer Country	|
+|	TAX	|	NUMBER(15,2)  	|	Tax	|
+|	USE_FEE	|	NUMBER(15,2)  	|	Use Fee	|
+|	TRAN_FEE	|	NUMBER(15,2)  	|	Transaction Fee	|
+|	ATTR_FEE	|	NUMBER(15,2)  	|	Attribute Fee	|
+|	Before tax	|	NUMBER(15,2)  	|	Before Tax Amount	|
+|	PAID	|	NUMBER(15,2)  	|	Total Paid	|
+|	START_DATE	|	DATE	|	Arrival Date	|
+|	END_DATE	|	DATE	|	Departure Date	|
+|	ORD_DATE	|	DATE	|	Order Date	|
+|	TENT	|	NUMBER(38)	|	Equipment - Quantity	|
+|	POPUP	|	NUMBER(38)	|	Equipment - Quantity	|
+|	TRAILER	|	NUMBER(38)	|	Equipment - Quantity	|
+|	RV_MOTORHOME	|	NUMBER(38)	|	Equipment - Quantity	|
+|	BOAT	|	NUMBER(38)	|	Equipment - Quantity	|
+|	HORSE_TRAILER	|	NUMBER(38)	|	Equipment - Quantity	|
+|	CAR	|	NUMBER(38)	|	Equipment - Quantity	|
+|	FIFTH_WHEEL	|	NUMBER(38)	|	Equipment - Quantity	|
+|	VAN	|	NUMBER(38)	|	Equipment - Quantity	|
+|	CANOE_KAYAK	|	NUMBER(38)	|	Equipment - Quantity	|
+|	BOAT_TRAILER	|	NUMBER(38)	|	Equipment - Quantity	|
+|	MOTORCYCLE	|	NUMBER(38)	|	Equipment - Quantity	|
+|	TRUCK	|	NUMBER(38)	|	Equipment - Quantity	|
+|	BUS	|	NUMBER(38)	|	Equipment - Quantity	|
+|	BICYCLE	|	NUMBER(38)	|	Equipment - Quantity	|
+|	SNOWMOBILE	|	NUMBER(38)	|	Equipment - Quantity	|
+|	OFF_ROAD_ALL_TERRAIN_VEHICLE	|	NUMBER(38)	|	Equipment - Quantity	|
+|	POWER_BOAT	|	NUMBER(38)	|	Equipment - Quantity	|
+|	PICKUP_CAMPER	|	NUMBER(38)	|	Equipment - Quantity	|
+|	LARGE_TENT_OVER_9X12	|	NUMBER(38)	|	Equipment - Quantity	|
+|	SMALL_TENT	|	NUMBER(38)	|	Equipment - Quantity	|
+|	MARINABOAT	|	NUMBER(38)	|	Equipment - Quantity	|
 
 #### NCSU
 
@@ -45,10 +100,10 @@ The [NRRS_PPL_reservationdata_AllYears.csv](https://velocity.ncsu.edu/dl/1uRTn6g
 
 This dataset includes most of the original RIDB fields along with newly calculated fields by NCSU.  The additional fields are:
 
-1. Great circle distance - distance between visitor ZIP centroid and destination facility x y in km.
-2. Duration - length of stay.  Difference between arrival and departure in days.
-3. Lead time - difference between reservation order date and vacation start date.
-4. Person nights - duration x number of ppl in the party.  Say I have two people in my party staying for 5 nights, total person nights would be 10.
+1. *Great circle distance* - distance between visitor ZIP centroid and destination facility x y in km.
+2. *Duration* - length of stay - difference between arrival and departure in days.
+3. *Lead time* - difference between reservation order date and vacation start date.
+4. *Person nights* - duration x number of ppl in the party.  Say I have two people in my party staying for 5 nights, total person nights would be 10.
 
 ### The Integrated Resource Management Applications Portal (IRMA)
 
