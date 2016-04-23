@@ -29,12 +29,14 @@ This paragraph will list the datasets we identified as interesting when we had a
 
 This an http API with extensive documentatin that can be found [here](https://usda.github.io/RIDB/). Register for an API key [here](https://ridb.recreation.gov/?action=register) and check out my [example notebook](examples/recreation_database_api.ipynb).
 
-In case you don't feel like using their API, you can download the whole dataset from [here](https://ridb.recreation.gov/?action=datadownload).
+In case you don't feel like using their API, you can download the whole dataset from [here](https://ridb.recreation.gov/?action=datadownload), or slack @dannoparker for a disk copy.
 
 
 ### Data Dictionary for RIDB and NCSU
 
 #### RIDB
+The RIDB historical RIDB data is organized into 10 separate csv files.  Note that these files are organized by U.S. Government fiscal year.  So, 2015 would represent orders placed between October 1st, 2014 and September 30th, 2015.  Contact @delapper if you have questions about how the files are organized.
+
 |	COLUMN	|	DATA-TYPE	|	DESCRIPTION	|
 | ---		| ---		| ---		|
 |	ID	|	NUMBER(38)	|	System generated unique id for the order	|
