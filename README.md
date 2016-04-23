@@ -32,6 +32,24 @@ This an http API with extensive documentatin that can be found [here](https://us
 In case you don't feel like using their API, you can download the whole dataset from [here](https://ridb.recreation.gov/?action=datadownload).
 
 
+### Data Dictionary for RIDB and NCSU
+
+#### RIDB
+Coming soon...
+
+#### NCSU
+
+There are three NCSU datasets available at [https://cnr.ncsu.edu/geospatial/bayes-hack/] (https://velocity.ncsu.edu/dl/1uRTn6g/276112)
+
+The [NRRS_PPL_reservationdata_AllYears.csv](https://velocity.ncsu.edu/dl/1uRTn6g/276112) file is the cleaned RIDB data compiled by NCSU.  There are two additional datasets that are aggregates of this information.  This section identifies the differences between the two datasets.  Contact Stacy if you use Matlab and want the .mat file for this dataset. 
+
+This dataset includes most of the original RIDB fields along with newly calculated fields by NCSU.  The additional fields are:
+
+1. Great circle distance - distance between visitor ZIP centroid and destination facility x y in km.
+2. Duration - length of stay.  Difference between arrival and departure in days.
+3. Lead time - difference between reservation order date and vacation start date.
+4. Person nights - duration x number of ppl in the party.  Say I have two people in my party staying for 5 nights, total person nights would be 10.
+
 ### The Integrated Resource Management Applications Portal (IRMA)
 
 The [portal](https://irma.nps.gov/Portal) offers a large amount of datasets in different formats. Notable categories are:
