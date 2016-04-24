@@ -35,7 +35,8 @@ In case you don't feel like using their API, you can download the whole dataset 
 ### Data Dictionary for RIDB and NCSU
 
 #### RIDB
-Coming soon...
+
+http://usda.github.io/RIDB/#data-dictionary
 
 #### NCSU
 
